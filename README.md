@@ -7,5 +7,6 @@ A table component for JMVC 3.2.4.
 ### Parameters
 - headers (object literal)
 - rows (JMVC list)
+- template *optional* (string)
 
-Both arguments must be satisfied for the table to correctly render.
+Both `headers` and `rows` arguments must be satisfied for the table to correctly render.

@@ -43,7 +43,7 @@ steal(
     	},
 
         render: function() {
-            this.options.template = this.options.template ? '//' + this.options.template : 'tableView.ejs';
+            this.options.template = this.options.template || 'tableView.ejs';
             this.element.append(this.view(this.options.template, this.options));
         }
     });
