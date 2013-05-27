@@ -43,7 +43,8 @@ steal(
     	},
 
         render: function() {
-            this.element.append(this.view('tableView.ejs', this.options));
+            this.options.template = this.options.template ? '//' + this.options.template : 'tableView.ejs';
+            this.element.append(this.view(this.options.template, this.options));
         }
     });
 
