@@ -1,0 +1,83 @@
+.frogui_components_actionmenu {
+    .dropdown-menu {
+        right: -1px;
+        top: 30px;
+        border-radius: 6px 0px 6px 6px;
+        -moz-border-radius: 6px 0px 6px 6px;
+        -webkit-border-radius: 6px 0px 6px 6px;
+        max-width:275px;
+        text-align: left;
+
+        &.hidden {
+            display:none;
+        }
+
+        li {
+            position: relative;
+
+            a {
+                white-space: nowrap;
+
+                .actionmenu-item-icon {
+                    float: none;
+                    margin: 0;
+                    padding: 0;
+                    width: 18px!important;
+                    height: 18px!important;
+                    display: inline-block;
+                }
+            }
+
+            // Disabled menu item
+            &.actionmenu-item-disabled a {
+                cursor: default;
+                color:gray;
+
+                -moz-opacity:.50;
+                filter:alpha(opacity=50);
+                opacity:.50;
+
+                &:hover {
+                    text-decoration: none;
+                    background: transparent;
+                }
+            }
+
+            // Toggled menu item
+            &.actionmenu-item-toggled {
+                .actionmenu-item-toggle {
+                    background: url("../../../../../public/icon/UI/icons.png") -190px -136px no-repeat;
+                    display: inline-block;
+                    width: 7px!important;
+                    height: 7px;
+                    margin-top: 5px;
+                    margin-right: 5px;
+                    float: right;
+                }
+            }
+
+            &.actionmenu-item-nohover:hover {
+                cursor: default!important;
+                background: none!important;
+                color: inherit!important;
+            }
+        }
+    }
+
+    .app-icon-actions {
+        background-image: url("../../../../../resources/public/css/images/actions.png");
+        background-repeat: no-repeat;
+        float: left;
+        height: 20px;
+        width: 20px;
+    }
+
+    .caret {
+        margin-left: 3px;
+    }
+
+    a.dropdown-toggle {
+        display: inline-block;
+        padding: 4px 6px;
+    }
+}
