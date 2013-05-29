@@ -21,7 +21,14 @@ Frog.Controller.extend('Frogui.Controllers.Components.Table', {
 
     render: function() {
         this.options.template = this.options.template || '//frogui/components/table/views/core/table.ejs';
-        this.element.append(this.view(this.options.template, this.options));
+        this.element.html(this.view(this.options.template, this.options));
+    },
+
+    update: function(options) {
+        this._super(options);
+        alert('alert cool')
+        console.log('cool')
+        this.render();
     }
 
 });
