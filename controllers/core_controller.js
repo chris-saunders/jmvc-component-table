@@ -26,8 +26,6 @@ Frog.Controller.extend('Frogui.Controllers.Components.Table', {
 
     update: function(options) {
         this._super(options);
-        alert('alert cool')
-        console.log('cool')
         this.render();
     }
 
