@@ -4,12 +4,9 @@ jmvc-component-table
 A table component for JMVC 3.2.4.
 
 ## API
-### Parameters
-- `headers` (object literal)
-- `rows` (JMVC list)
-- `template` *optional* (string)
-
-Both `headers` and `rows` arguments must be satisfied for the table to correctly render.
+*JQuery element*.table({
+    object literal `headers`, JMVC list `rows`, [ string `template` ]
+})
 
 ## Overview
 This component has been designed to allow users to generate a table with minimum effort whilst maintaining flexibility and enforcing adherence to the JMVC standards.
@@ -38,6 +35,10 @@ This component has been designed to allow users to generate a table with minimum
         rows: Users,
         template: '//userApp/views/tableOverride.ejs'
     })
+As you are providing the data you can reference that data in your templates.
 
 ## Additional Info
 This component needs tests!
+
+### Suggestions & Questions
+chris.saunders@frogtrade.com
