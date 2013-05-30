@@ -1,10 +1,10 @@
 jmvc-component-table
 ====================
 
-A table component for JMVC 3.2.4.
+A flexible table component for JMVC 3.2.4.
 
 ## API
-*JQuery element*.table({
+$('#someElement').frogui_components_table({
     object literal `headers`, JMVC list `rows`, [ string `template` ]
 })
 
@@ -18,7 +18,7 @@ This component has been designed to allow users to generate a table with minimum
 
 ## Getting Started
 ### Quick-start
-    $('#someElement').table({
+    $('#someElement').frogui_components_table({
         headers: {
             name: "Name",
             age: "Age"
@@ -27,7 +27,7 @@ This component has been designed to allow users to generate a table with minimum
     })
     
 ### Your own view template
-    $('#someElement').table({
+    $('#someElement').frogui_components_table({
         headers: {
             name: "Name",
             age: "Age"
