@@ -7,14 +7,17 @@ Frog.Controller.extend('Frogui.Controllers.Components.Table', {
     init: function() {
         if (this.options.headers && this.options.rows) {
             if (!this.options.rows.match) {
+                console.log('Data provided', this.options);
                 throw new Error('Must provide JMVC list for `rows`.');
             }
 
             if (Frog.Utilities.toType(this.options.headers) !== 'object' || this.options.headers === null) {
+                console.log('Data provided', this.options);
                 throw new Error('Must provide object literal for `headers`.');
             }
             this.render();
         } else {
+            console.log('Data provided', this.options);
             throw new Error('Must provide object literal for `headers` AND JMVC list for `rows`.');
         }
     },
