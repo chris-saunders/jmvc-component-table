@@ -1,7 +1,7 @@
 <table class="table table-striped">
     <thead>
         <tr>
-        <% 
+        <%
             for (var key in headers) {
                 if (headers.hasOwnProperty(key)) {
         %>
@@ -15,12 +15,11 @@
     <tbody>
     <% rows.each(function(index, model) { %>
         <tr <%= model %>>
-        <% 
-            for (var key in model) {
-                if (model.hasOwnProperty(key)) {
+        <%
+            for (var key in headers) {
         %>
-                    <td><%= model.attr(key) %></td>
-        <%      }
+                <td><%= model.attr(key) ? model.attr(key) : '' %></td>
+        <%
             }
         %>
         </tr>
