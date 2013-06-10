@@ -5,7 +5,9 @@ A flexible table component for JMVC 3.2.4.
 
 ## API
 $('#someElement').frogui_components_table({
-    object literal `headers`, JMVC list `rows`, [ string `template` ]
+    [ object literal `headers`, 
+    JMVC list `rows`,
+    string `template` ]
 })
 
 ## Overview
@@ -28,10 +30,6 @@ This component has been designed to allow users to generate a table with minimum
     
 ### Your own view template
     $('#someElement').frogui_components_table({
-        headers: {
-            name: "Name",
-            age: "Age"
-        },
         rows: Users,
         template: '//userApp/views/tableOverride.ejs'
     })

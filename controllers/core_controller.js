@@ -1,25 +1,22 @@
 Frog.Controller.extend('Frogui.Controllers.Components.Table', {
-    /* @Static */
-    listensTo: ['table.enable', 'table.disable', 'table.destroy'],
-
+    defaults: {
+        headers: {},
+        rows: new Frog.Model.List()
+    }
 }, {
 
     init: function() {
-        if (this.options.headers && this.options.rows) {
-            if (!this.options.rows.match) {
-                console.log('Data provided', this.options);
-                throw new Error('Must provide JMVC list for `rows`.');
-            }
-
-            if (Frog.Utilities.toType(this.options.headers) !== 'object' || this.options.headers === null) {
-                console.log('Data provided', this.options);
-                throw new Error('Must provide object literal for `headers`.');
-            }
-            this.render();
-        } else {
+        // Assert types on parameters
+        if (!this.options.rows.match) {
             console.log('Data provided', this.options);
-            throw new Error('Must provide object literal for `headers` AND JMVC list for `rows`.');
+            throw new Error('Must provide JMVC list for `rows`.');
         }
+
+        if (Frog.Utilities.toType(this.options.headers) !== 'object') {
+            console.log('Data provided', this.options);
+            throw new Error('Must provide object literal if providing `headers`.');
+        }
+        this.render();
     },
 
     render: function() {
